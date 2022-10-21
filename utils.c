@@ -4,11 +4,11 @@
  * is_printable - Evaluates if a char is printable
  * @c: char to be evaluted.
  *
- * Return: 1 if c is printabel, 0 otherwise
+ * Return: 1 if c is printable, 0 otherwise
  */
 int is_printable(char c)
 {
-	if (c >= 32 && < 127)
+	if (c >= 32 && c < 127)
 		return (1);
 
 	return (0);
@@ -32,7 +32,7 @@ int append_hexa_code(char ascii_code, char buffer[], int i)
 	buffer[i++] = 'x';
 
 	buffer[i++] = map_to[ascii_code / 16];
-	buffe[i] = map_to[ascii_code % 16];
+	buffer[i] = map_to[ascii_code % 16];
 
 	return (3);
 }
@@ -69,11 +69,11 @@ long int convert_size_number(long int num, int size)
 }
 
 /**
- * convert_size_number - Casts a number to the specified size
+ * convert_size_unsgnd - Casts a number to the specified size
  * @num: Number to be casted
  * @size: Number indicating the type to be casted
  *
- * Return: Casted value of sum
+ * Return: Casted value of num
  */
 long int convert_size_unsgnd(unsigned long int num, int size)
 {
@@ -82,5 +82,5 @@ long int convert_size_unsgnd(unsigned long int num, int size)
 	else if (size == S_SHORT)
 		return ((unsigned short)num);
 
-	return ((unsigned short)num);
+	return ((unsigned int)num);
 }

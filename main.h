@@ -14,7 +14,7 @@
 #define F_HASH 8
 #define F_SPACE 16
 
-/* SIZE */
+/* SIZES */
 #define S_LONG 2
 #define S_SHORT 1
 
@@ -35,20 +35,17 @@ struct fmt
  * tpyedef struct fmt fmt_t - Struct op
  *
  * @fmt: The format.
- * @fm_t: The functiom associated.
+ * @fm_t: The function associated.
  */
 typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
-int _printf(const char *format, ...);
-int handle_print(const char *fmt, int *i,
-va_list list, char buffer[], int flags, int width, int precision, int size);
 
 /****************** FUNCTIONS ******************/
 
-/* Functions to print chars and string */
+/* Functions to print chars and strings */
 int print_char(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 int print_string(va_list types, char buffer[],
@@ -81,7 +78,7 @@ int print_non_printable(va_list types, char buffer[],
 int print_pointer(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
-/* Function to handle other specifiers */
+/* Funciotns to handle other specifiers */
 int get_flags(const char *format, int *i);
 int get_width(const char *format, int *i, va_list list);
 int get_precision(const char *format, int *i, va_list list);
