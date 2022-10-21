@@ -8,7 +8,7 @@
  */
 int is_printable(char c)
 {
-	if (c >= 32 && 127)
+	if (c >= 32 && < 127)
 		return (1);
 
 	return (0);
@@ -46,8 +46,6 @@ int append_hexa_code(char ascii_code, char buffer[], int i)
 int is_digit(char c)
 {
 	if (c >= '0' && c <= '9')
-{
-	if (c >= '0' && c <= '9')
 		return (1);
 
 	return (0);
@@ -69,6 +67,7 @@ long int convert_size_number(long int, int size)
 
 	return ((int)num);
 }
+
 /**
  * convert_size_number - Casts a number to the specified size
  * @num: Number to be casted 

@@ -2,7 +2,7 @@
 #define MAIN_H
 #include <stdarg.h>
 #include <stdio.h>
-#include <unistd.>
+#include <unistd.h>
 
 #define UNUSED(x) (void)(x)
 #define BUFF_SIZE 1024
@@ -32,7 +32,7 @@ struct fmt
 
 
 /**
- * tpyedef struct fmt fmt_t Struct op
+ * tpyedef struct fmt fmt_t - Struct op
  *
  * @fmt: The format.
  * @fm_t: The functiom associated.
@@ -41,7 +41,7 @@ typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
-
+va_list list, char buffer[], int flags, int width, int precision, int size);
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
@@ -107,7 +107,7 @@ int write_pointer(char buffer[], int ind, int length,
 
 int write_unsgnd(int is_negative, int ind,
 char buffer[],
-	int int flags, int width, int precision, int size);
+	int flags, int width, int precision, int size);
 
 /****************** UTILS ******************/
 int is_printable(char);

@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * handle_print - Prints an argument based on this types
+ * handle_print - Prints an argument based on its types
  * @fmt: Formatted string in which to print the arguments.
  * @list: List of arguments to be printed.
  * @ind: ind.
@@ -37,6 +37,8 @@ int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
 		{
 			--(*ind);
 			while (fmt[*ind] != ' ' && fmt[*ind] != '%')
+				--(*ind);
+			if (fmt[*ind] == ' ')
 				--(*ind);
 			return (1);
 		}
