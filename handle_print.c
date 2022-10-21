@@ -29,7 +29,7 @@ int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
 	if (fmt_types[i].fmt == '\0')
 	{
 		if (fmt[*ind] == '\0')
-			return(-1);
+			return (-1);
 		unknown_len += write(1, "%%", 1);
 		if (fmt[*ind - 1] == ' ')
 		       unkown_len += write(1, " ", 1);
