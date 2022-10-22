@@ -23,8 +23,6 @@ int print_pointer(va_list types, char buffer[],
 	UNUSED(width);
 	UNUSED(size);
 
-	UNUSED(size);
-
 	if (addrs == NULL)
 		return (write(1, "(nil)", 5));
 

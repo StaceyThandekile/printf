@@ -35,7 +35,7 @@ int print_unsigned(va_list types, char buffer[],
 	return (write_unsgnd(0, i, buffer, flags, width, precision, size));
 }
 
-/************* PRINT UNSIGNED NUMBER IN OCTAL ****************/
+/************* PRINT UNSIGNED NUMBER IN OCTAL  ****************/
 /**
  * print_octal - Prints an unsgined number in octal notation
  * @types: Lista of arguments
@@ -54,7 +54,7 @@ int print_octal(va_list types, char buffer[],
 	unsigned long int num = va_arg(types, unsigned long int);
 	unsigned long int init_num = num;
 
-	unused(width);
+	UNUSED(width);
 
 	num = convert_size_unsgnd(num, size);
 
@@ -86,7 +86,7 @@ int print_octal(va_list types, char buffer[],
  * @width: get width
  * @precision: Precision specification
  * @size: Size specifier
- * Return: Number of chars printed.
+ * Return: Number of chars printed
  */
 int print_hexadecimal(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
@@ -104,7 +104,7 @@ int print_hexadecimal(va_list types, char buffer[],
  * @width: get width.
  * @size: Size specifier
  * @precision: Precision specification
- * Return: Number of chars printed.
+ * Return: Number of chars printed
  */
 int print_hexa_upper(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
